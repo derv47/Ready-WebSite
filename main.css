@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    border:none;
+    outline:none;
+    font-family: 'inter', sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color:unset;
+}
+button {
+    background: none;
+    border:none;
+    outline: none;
+}
+html, body {
+    overflow-x: hidden;
+    background-color: #F5F4F1;
+    background-image: url("Image/background.png");
+    background-repeat: repeat;
+}
+:root {
+    --mainColor: #5242FF;
+    --width: 1170px;
+    --gap:27px;
+    --smallgap: 17px;
+    --padd: calc((100vw - var(--width)) / 2);
+    --borderRadius: 12px;
+    --margin: 100px;
+    --bigFS: 62px;
+    --largeFS: 70px;
+    --titleFS: 40px;
+    --subtitleFS: 30px;
+    --mediumFS: 13px;
+    --smallFS: 8px;
+
+    /* marginsizes */
+    --laptops: 1024px;
+    --pads: 768px;
+    --bigphones: 425px;
+    --smallphones: 320px;
+    /* marginsizes */
+}
+
+
+
+
+.__Container {
+    width: var(--width);
+    display: flex;
+    margin:auto;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+.__basicRowFlex {
+    display: flex;
+    align-items: center;
+    gap:var(--gap);
+    flex-direction: row;
+    width: 100%;
+}
+.__basicColumnFlex {
+    display: flex;
+    align-items: center;
+    gap:var(--gap);
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    border-bottom: 1px solid #0000001e;
+}
+.headerCont {
+    padding: 10px 0px;
+    height: 48px;
+    justify-content: space-between;
+}
+.headerCont__RightPart {
+    width: unset;
+    gap:10px;
+    margin:unset
+}
+#Avatars {
+    height:32px
+}
+.Main__button {
+    padding: 6px 13px;
+    background-color: var(--mainColor);
+    color:white;
+    font-size: var(--mediumFS);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+
+
+main {
+    margin-top: 128px;
+}
+section {
+    margin-top: var(--margin);
+}
+.HeroMenu {
+    flex-direction: column;
+    align-items: center;
+}
+.TextBlock {
+    align-items: center;
+    width: auto;
+    gap: 20px;
+}
+.BlueSmallSubTitle {
+    font-size: var(--mediumFS);
+    color: var(--mainColor);
+    letter-spacing: 2px;
+    line-height:16px;
+    font-weight: 600;
+}
+.Title {
+    font-size: 62px;
+    font-weight: bolder;
+    color:black;
+    text-align: center;
+    line-height: 80px;
+    padding-bottom: 20px;
+
+}
+.SubTitle {
+    font-size: 17px;
+    text-align: center;
+}
+#HeroMenu__Image {
+    width: calc(var(--width)  * 0.9);
+}
+.TitlesomeStyle {
+    padding:5px 10px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #7366fe4f;
+    border-right: var(--mainColor) 3px solid;
+    position: relative;
+}
+.TitlesomeStyle::after {
+    content: "Febby";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: var(--mainColor);
+    border-radius: 5px;
+    right: -50px;
+    top: -18px;
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    font-size: 10px;
+    color: white;
+}
+
+
+
+
+.superPower {
+    flex-direction: column;
+}
+@keyframes floatMove {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(10vw) translateY(0px); /* уходит вправо и немного вниз */
+    }
+    50% {
+        transform: translateX(0) translateY(0px); /* возвращается и чуть вверх */
+    }
+    75% {
+        transform: translateX(-10vw) translateY(0px); /* уходит влево и чуть вниз */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* возвращается на исходную */
+    }
+}
+.superPowerImage {
+    width: 120vw;
+    animation: floatMove 20s ease-in-out infinite
+}
+
+
+
+.Mettings {
+    flex-direction: column;
+}
+.__MettingsText {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+.__MettingsText .Title {
+    position: relative;
+}
+.__MettingsText .Title::before {
+    position: absolute;
+    bottom: -5px;
+    right:0px;
+    height: 20px;
+    width: 50%;
+    background-image: url("Image/underline.png");
+    background-repeat:no-repeat ;
+    content: "";
+}
+.__MettingsText .Title, .__MettingsText .SubTitle {
+    text-align: start;
+}
+
+.ImageBlock {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2%;
+    row-gap: 2%;
+    align-items: start;
+    justify-content: start;
+    align-content: start;
+    flex-wrap: nowrap;
+}
+.LeftPart {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--width)  * 0.02);
+}
+#Mettings1 {
+    width: 100%;
+    height: fit-content;
+}
+#Mettings2 {
+    width: 28%;
+    transform: translateY(-10%);
+}
+#Mettings3 {
+    width: 80%;
+    height: fit-content;
+    margin-left: 20%;
+}
+
+
+
+.Leave {
+    flex-direction: column;
+    gap:var(--margin);
+}
+#circled {
+    position: relative;
+    z-index: 2;
+}
+#circled::after {
+    position: absolute;
+    top:-10px;
+    left:-10px;
+    right: 0px;
+    bottom: -10px;
+    background-image: url("Image/circle.png");
+    background-repeat: no-repeat;
+    content: "";
+    z-index: -1;
+}
+.Leave .ImageBlock {
+    align-items: center;
+}
+.Leave .LeftPart {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--width)  * 0.02);
+    align-items: end;
+}
+#Leave1 {
+    width: 100%;
+    height: fit-content;
+}
+#Leave2 {
+    width: 50%;
+}
+#Leave3 {
+    width: 40%;
+    height: fit-content;
+}
+
+
+.__Brightness {
+    background-image: url(Image/backgroundForSection.png);
+    background-size: cover;
+}
+
+#zagaguOne {
+    position: relative;
+    z-index: 2;
+}
+#zagaguOne::after {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -10px;
+    background-image: url("Image/lasta_ZAGAGULIA_TWO.png");
+    content: "";
+    background-size:contain;
+    background-repeat:no-repeat ;
+    height:20px;
+}
+#zagaguTwo {
+    position: relative;
+    z-index: 2;
+}
+#zagaguTwo::after {
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    width: 110%;
+    bottom: -20px;
+    background-image: url("Image/lasta_ZAGAGULIA_ONE.png");
+    background-size:contain;
+    background-repeat:no-repeat ;
+    content: "";
+    height:25px;
+}
+.Leave img {
+    width: 100%;
+}
+
+#Leave__options {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 470px;
+    align-items: center;
+    justify-content: center;
+}
+.Leave__buttons {
+    font-size: var(--mediumFS);
+    color: var(--mainColor);
+    padding: 5px 14px;
+    border-radius: 100px;
+    line-height: 24px;
+    border:1px solid #5c6ae450;
+}
+.ButtonCont {
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+.ActionSection {
+    align-items: center;
+    justify-content: center;
+}
+
+.last_button {
+    padding: 9px 25px;
+    font-size: var(--mediumFS);
+    line-height: 24px;
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 12px;
+}
+.last_button:last-of-type {
+    background:none;
+    border: 1px solid var(--mainColor);
+    color:var(--mainColor)
+}
+
+
+footer {
+    margin-bottom:50px !important;
+    margin-top:150px !important;
+    align-items: start;
+}
+.footer__leftPart {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.footer__leftPart a {
+    color:#8B8C96;
+    margin-right: 5px;
+}
+.footer__rightPart {
+    display: flex;
+    align-self: start;
+    justify-content: start;
+    gap:5px;
+}
+.icon {
+    width: 16px;
+}
+
+@media (max-width:1270px) {
+    :root {
+        --width: calc(100vw - 100px);
+    }
+}
+@media (max-width:1024px) {
+    :root {
+        --width: calc(100vw - 20px);
+    }
+}
+@media (max-width:648px) {
+    .Title {
+        font-size: 42px;
+        line-height: 64px;
+    }
+    #zagaguOne::after {
+        bottom: -20px;
+    }
+    #zagaguTwo::after {
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        bottom: -25px;
+    }
+    #circled::after {
+        left: 0;
+        right: -10px;
+        bottom: 0px;
+        height: 100%;
+        top: 0;
+        background-size: contain;
+    }
+    .SubTitle {
+        font-size: 12px;
+    }
+    footer {
+        font-size: 12px;
+    }
+    .Leave {
+        gap: 30px;
+    }
+}
+@media (max-width:495px) {
+    .Title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .SubTitle {
+        font-size: 10px;
+    }
+    .TextBlock {
+        gap:10px;
+    }
+    .BlueSmallSubTitle {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    #Mettings2 {
+        transform: translateY(0);
+    }
+    #Leave__options {
+        width: 100%;
+    }
+    .Leave__buttons {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+}
